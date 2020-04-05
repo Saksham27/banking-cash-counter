@@ -11,6 +11,10 @@ namespace BankingCashCounter
         public int length;
         private static T[] queue;
 
+        /// <summary>
+        /// constructor method to initialize a queue
+        /// </summary>
+        /// <param name="size"> max size of queue </param>
         public QueueImplementation(int size)
         {
             front = default;
@@ -18,12 +22,20 @@ namespace BankingCashCounter
             queue = new T[size];
         }
 
+        /// <summary>
+        /// method to add a element to the rear end of queue
+        /// </summary>
+        /// <param name="value"> value of the element to be added </param>
         internal void Enqueue(T value)
         {
             queue[rear++] = value;
             length++;
         }
 
+        /// <summary>
+        /// method to remove a element to the front end of queue
+        /// </summary>
+        /// <returns> value of removed element </returns>
         internal T Dequeue()
         {
             if(front == rear)
@@ -51,6 +63,10 @@ namespace BankingCashCounter
            
         }
 
+        /// <summary>
+        /// method to view front element of queue
+        /// </summary>
+        /// <returns> front element value of queue </returns>
         internal T Peek()
         {
             if (front == rear)
