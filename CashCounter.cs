@@ -6,7 +6,8 @@ namespace BankingCashCounter
 {
     class CashCounter
     {
-        private const int STARTING_BALANCE = 5000;
+        const int STARTING_BALANCE = 5000;
+        const int EMPTY = 0;
         private int balance;
         
         /// <summary>
@@ -108,7 +109,7 @@ namespace BankingCashCounter
                         continue;
 
                     case 2:
-                        if (accountNo.length > 0 && name.length > 0)
+                        if (accountNo.length > EMPTY && name.length > EMPTY)
                         {
                             int inner = TransactionPanel();
                             switch (inner)
