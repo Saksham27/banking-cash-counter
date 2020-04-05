@@ -63,7 +63,7 @@ namespace BankingCashCounter
             money = Convert.ToInt32(Console.ReadLine());
             balance += money;
             Console.WriteLine("\n------------- Cash Deposit Reciept -----------");
-            database[Convert.ToInt32(accountNo.Peek())] = money;
+            
             Console.WriteLine("\n\tCash Deposited :   {0}\n\tAccount No :  {1}\n\tCust Name :   {2}\n", money, accountNo.Dequeue(), name.Dequeue());
 
             Console.WriteLine("------------  ---------------------------------");
@@ -115,7 +115,7 @@ namespace BankingCashCounter
                             {
                                 // Deposit Money
                                 case 1:
-                                    DepositMoney(accountNo, name, money, database);
+                                    DepositMoney(accountNo, name, money);
                                     continue;
                                 
                                 // Withdrwal
