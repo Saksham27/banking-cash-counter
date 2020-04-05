@@ -9,14 +9,20 @@ namespace BankingCashCounter
         public int accountNo;
         public string customerName;
         
-        public void setAccountNo()
+        /// <summary>
+        /// method to enter account number by customer
+        /// </summary>
+        public void SetAccountNo()
         {
             Console.Write("Enter your account No. : ");
             this.accountNo  = Convert.ToInt32(Console.ReadLine());
             
         }
 
-        public void setName()
+        /// <summary>
+        /// method to enter name by customer
+        /// </summary>
+        public void SetName()
         {
             Console.Write("Enter Your name : ");
             this.customerName =  Console.ReadLine();
