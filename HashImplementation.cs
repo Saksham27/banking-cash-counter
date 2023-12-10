@@ -4,13 +4,13 @@ using System.Text;
 
 namespace BankingCashCounter
 {
-    internal class HashNode<T> {
+    internal class HashNode<T>
+    {
         public string key;
         public T value;
         public HashNode<T> next;
         public HashNode<T> previous;
     }
-    
     class HashImplementation<T>
     {
         private HashNode<T>[] hashTable;
@@ -66,7 +66,7 @@ namespace BankingCashCounter
                 Console.WriteLine("Can't use same key!");
                 return;
             }
-                
+
             // loop through the hash table and if key exists return or assign key to value
             while (node.next != null)
             {
@@ -100,12 +100,12 @@ namespace BankingCashCounter
                 else
                 {
                     node = node.next;
-                }               
+                }
             }
             Console.WriteLine("Don't have the key in hash!");
             return default;
         }
     }
 
-    }
 }
+
